@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://edo1g1nodm3a"]
+
+[ext_resource type="PackedScene" uid="uid://ddmxnmenrkn03" path="res://data/characters/player.tscn" id="1_tbk1p"]
+[ext_resource type="PackedScene" uid="uid://3arwuhoj1414" path="res://data/levels/Environment/grass.tscn" id="2_ubahf"]
+[ext_resource type="PackedScene" uid="uid://b3um5awayhb32" path="res://data/levels/Environment/bush.tscn" id="3_mcd4g"]
+[ext_resource type="PackedScene" uid="uid://k0terwbbwfsd" path="res://data/levels/Environment/tree.tscn" id="4_knnsj"]
+
+[node name="world" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_tbk1p")]
+position = Vector2(205, 103)
+
+[node name="Environment" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="ENV objects" type="Node2D" parent="Environment"]
+y_sort_enabled = true
+
+[node name="Grass" type="Node2D" parent="Environment/ENV objects"]
+y_sort_enabled = true
+
+[node name="Grass" parent="Environment/ENV objects/Grass" instance=ExtResource("2_ubahf")]
+position = Vector2(154, 84)
+
+[node name="Grass2" parent="Environment/ENV objects/Grass" instance=ExtResource("2_ubahf")]
+position = Vector2(154, 110)
+
+[node name="Bushes" type="Node2D" parent="Environment/ENV objects"]
+y_sort_enabled = true
+
+[node name="Bush" parent="Environment/ENV objects/Bushes" instance=ExtResource("3_mcd4g")]
+position = Vector2(184, 74)
+
+[node name="Bush2" parent="Environment/ENV objects/Bushes" instance=ExtResource("3_mcd4g")]
+position = Vector2(226, 75)
+
+[node name="Trees" type="Node2D" parent="Environment/ENV objects"]
+y_sort_enabled = true
+
+[node name="Tree" parent="Environment/ENV objects/Trees" instance=ExtResource("4_knnsj")]
+position = Vector2(93, 81)

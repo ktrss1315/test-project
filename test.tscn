@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://blp0iqtx7hd8c"]
+
+[ext_resource type="Script" path="res://opopa.gd" id="1_dw78d"]
+[ext_resource type="Texture2D" uid="uid://bhk0fihpp43o5" path="res://icon.svg" id="2_pxcth"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5e8k"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_dw78d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_pxcth")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_r5e8k")
